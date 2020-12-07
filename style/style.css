@@ -13,15 +13,23 @@ svg {
 }
 .kick-pad,
 .snare-pad,
-.hihat-pad {
+.tom-pad,
+.hihat-pad,
+.clap-pad {
   width: 5rem;
   height: 5rem;
   margin: 1rem 0.5rem;
   cursor: pointer;
 }
 
+.tom-pad {
+  background-color: rgb(185, 196, 122);
+}
 .kick-pad {
   background-color: rgb(122, 122, 196);
+}
+.clap-pad{
+    background-color: rgb(184, 91, 91);
 }
 .snare-pad {
   background-color: rgb(131, 196, 122);
@@ -32,11 +40,17 @@ svg {
 .kick-pad.active {
   background-color: rgb(6, 6, 248);
 }
+.clap-pad.active{
+    background-color: rgb(207, 42, 42);
+}
 .snare-pad.active {
   background-color: rgb(39, 247, 11);
 }
 .hihat-pad.active {
   background-color: rgb(224, 21, 163);
+}
+.tom-pad.active {
+  background-color: rgb(205, 238, 20);
 }
 
 .sequencer {
@@ -48,7 +62,9 @@ svg {
 }
 .kick-track,
 .snare-track,
-.hihat-track {
+.hihat-track,
+.tom-track,
+.clap-track {
   display: flex;
   align-items: center;
   width: 70%;
@@ -58,7 +74,7 @@ svg {
 
 .kick,
 .snare,
-.hihat {
+.hihat,.clap,.tom {
   display: flex;
 }
 .controls {
@@ -96,6 +112,29 @@ select {
   padding: 1rem;
   font-size: 1rem;
   margin: 1rem;
+}
+
+.mute.active {
+  background-color: rgb(184, 179, 179);
+}
+.tempo {
+  margin: 3rem;
+  width: 30%;
+}
+.tempo-slider {
+  padding: 0.2rem;
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  position: relative;
+  background-color: rgb(88, 88, 88);
+  width: 100%;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+.tempo p {
+  font-size: 1.5rem;
+  margin: 2rem;
+  text-align: center;
 }
 
 @keyframes playTrack {
